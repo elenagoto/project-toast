@@ -288,7 +288,7 @@ There are lots of different ways to tackle this, and there's no right or wrong a
 ```js
 useEscapeKey(() => {
   // Code to dismiss all toasts
-});
+})
 ```
 
 **This is an open-ended exercise.** Feel free to experiment with different APIs and see what works best for you!
@@ -309,7 +309,7 @@ useEscapeKey(() => {
 ```bash
 # To start the dev env
 docker-compose up --build
-````
+```
 
 ```bash
 # to install a new package

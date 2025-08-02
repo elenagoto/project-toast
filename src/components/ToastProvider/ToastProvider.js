@@ -6,8 +6,7 @@ export const ToastContext = React.createContext()
 function ToastProvider({ children }) {
   const [listOfToasts, setListOfToasts] = React.useState([])
 
-  useEscapeKey(() => {
-    setListOfToasts([])
+  useEscapeKey('Escape', () => {setListOfToasts([])
   })
 
 

@@ -1,12 +1,13 @@
 import React from 'react'
-import useEscapeKey from '../../hooks/useEscapeKey'
+import useEscapeKey from '../../hooks/useKey'
 
 export const ToastContext = React.createContext()
 
 function ToastProvider({ children }) {
   const [listOfToasts, setListOfToasts] = React.useState([])
 
-  useEscapeKey('Escape', () => {setListOfToasts([])
+  useKey('Escape', () => {
+    setListOfToasts([])
   })
 
 

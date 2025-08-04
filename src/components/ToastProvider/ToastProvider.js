@@ -1,15 +1,16 @@
 import React from 'react'
-import useEscapeKey from '../../hooks/useKey'
+import useKey from '../../hooks/useKey'
 
 export const ToastContext = React.createContext()
 
 function ToastProvider({ children }) {
   const [listOfToasts, setListOfToasts] = React.useState([])
 
-  useKey('Escape', () => {
+  const handleEscape = React.useCallback(() => { 
     setListOfToasts([])
-  })
+  }, [])
 
+  useKey('Escape', handleEscape)
 
   // React.useEffect(() => {
   //   function handleKeyDown(e) {
